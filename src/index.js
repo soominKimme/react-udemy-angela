@@ -1,41 +1,60 @@
 ///////////////////////////////////////////////////////
-// 398. JSX Attributes & Styling React Elements
+// 399. Inline Styling for React Elements
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDom from "react-dom";
 
-const img = "https://picsum.photos/300";
+const customStyle = {
+  color: "green",
+  fontSize: "30px",
+  border: "2px solid red"
+};
 
-//Attribute in HTML should be 'camelCased'. => e.g. className, contentEditabble
-//
-ReactDOM.render(
-  <div>
-    <h1 className="heading" contentEditable="true" spellCheck="false">
-      My Favourite Foods
-    </h1>
-    <div>
-      <img
-        className="food-img"
-        alt="pizza"
-        src="https://www.foodandwine.com/thmb/4qg95tjf0mgdHqez5OLLYc0PNT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg"
-      ></img>
-      <img
-        className="food-img"
-        alt="ddeokbokki"
-        src="https://imgcdn.uuumall.kr/product/1/8867/default/8867.jpg?w=0&h=0&f=jpeg&q=60"
-      ></img>
-      <img
-        className="food-img"
-        alt="dumpling"
-        src="https://assets.epicurious.com/photos/628ba0d3fa016bab2139efa2/1:1/w_960,c_limit/Gyoza_RECIPE_051922_34332.jpg"
-      ></img>
-    </div>
+//How you update the CSS properties.
+customStyle.color = "blue";
 
-    <div>
-      <img alt="random" src={img + "?grayscale"} />
-    </div>
-  </div>,
+ReactDom.render(
+  <h1 style={customStyle}>Hello World!</h1>,
   document.getElementById("root")
 );
+
+///////////////////////////////////////////////////////
+// 398. JSX Attributes & Styling React Elements
+// import React from "react";
+// import ReactDOM from "react-dom";
+
+// const img = "https://picsum.photos/300";
+
+// //Attribute in HTML should be 'camelCased'. => e.g. className, contentEditabble
+// //
+// ReactDOM.render(
+//   <div>
+//     <h1 className="heading" contentEditable="true" spellCheck="false">
+//       My Favourite Foods
+//     </h1>
+//     <div>
+//       <img
+//         className="food-img"
+//         alt="pizza"
+//         src="https://www.foodandwine.com/thmb/4qg95tjf0mgdHqez5OLLYc0PNT4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/classic-cheese-pizza-FT-RECIPE0422-31a2c938fc2546c9a07b7011658cfd05.jpg"
+//       ></img>
+//       <img
+//         className="food-img"
+//         alt="ddeokbokki"
+//         src="https://imgcdn.uuumall.kr/product/1/8867/default/8867.jpg?w=0&h=0&f=jpeg&q=60"
+//       ></img>
+//       <img
+//         className="food-img"
+//         alt="dumpling"
+//         src="https://assets.epicurious.com/photos/628ba0d3fa016bab2139efa2/1:1/w_960,c_limit/Gyoza_RECIPE_051922_34332.jpg"
+//       ></img>
+//     </div>
+
+//     <div>
+//       <img alt="random" src={img + "?grayscale"} />
+//     </div>
+//   </div>,
+//   document.getElementById("root")
+// );
 
 ///////////////////////////////////////////////////////
 // 397. Javascript Expressions in JSX Practice
