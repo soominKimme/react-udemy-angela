@@ -1,21 +1,53 @@
 ///////////////////////////////////////////////////////
-// 399. Inline Styling for React Elements
+// 400. React Styling Practice
+
 import React from "react";
 import ReactDom from "react-dom";
 
+const date = new Date();
+const currentTime = date.getHours();
+let greeting;
+
 const customStyle = {
-  color: "green",
-  fontSize: "30px",
-  border: "2px solid red"
+  color: ""
 };
 
-//How you update the CSS properties.
-customStyle.color = "blue";
+if (currentTime < 12) {
+  greeting = "Morning";
+  customStyle.color = "red";
+} else if (currentTime < 18) {
+  greeting = "Afternoon";
+  customStyle.color = "green";
+} else {
+  greeting = "Evening";
+  customStyle.color = "blue";
+}
 
 ReactDom.render(
-  <h1 style={customStyle}>Hello World!</h1>,
+  <h1 className="heading" style={customStyle}>
+    Good {greeting}
+  </h1>,
   document.getElementById("root")
 );
+
+///////////////////////////////////////////////////////
+// 399. Inline Styling for React Elements
+// import React from "react";
+// import ReactDom from "react-dom";
+
+// const customStyle = {
+//   color: "green",
+//   fontSize: "30px",
+//   border: "2px solid red"
+// };
+
+// //How you update the CSS properties.
+// customStyle.color = "blue";
+
+// ReactDom.render(
+//   <h1 style={customStyle}>Hello World!</h1>,
+//   document.getElementById("root")
+// );
 
 ///////////////////////////////////////////////////////
 // 398. JSX Attributes & Styling React Elements
