@@ -1,34 +1,42 @@
 ///////////////////////////////////////////////////////
+// 401. React Components
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./component/App"; //Don't need to mention ".jsx "
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+///////////////////////////////////////////////////////
 // 400. React Styling Practice
 
-import React from "react";
-import ReactDom from "react-dom";
+// import React from "react";
+// import ReactDom from "react-dom";
 
-const date = new Date();
-const currentTime = date.getHours();
-let greeting;
+// const date = new Date();
+// const currentTime = date.getHours();
+// let greeting;
 
-const customStyle = {
-  color: ""
-};
+// const customStyle = {
+//   color: ""
+// };
 
-if (currentTime < 12) {
-  greeting = "Morning";
-  customStyle.color = "red";
-} else if (currentTime < 18) {
-  greeting = "Afternoon";
-  customStyle.color = "green";
-} else {
-  greeting = "Evening";
-  customStyle.color = "blue";
-}
+// if (currentTime < 12) {
+//   greeting = "Morning";
+//   customStyle.color = "red";
+// } else if (currentTime < 18) {
+//   greeting = "Afternoon";
+//   customStyle.color = "green";
+// } else {
+//   greeting = "Evening";
+//   customStyle.color = "blue";
+// }
 
-ReactDom.render(
-  <h1 className="heading" style={customStyle}>
-    Good {greeting}
-  </h1>,
-  document.getElementById("root")
-);
+// ReactDom.render(
+//   <h1 className="heading" style={customStyle}>
+//     Good {greeting}
+//   </h1>,
+//   document.getElementById("root")
+// );
 
 ///////////////////////////////////////////////////////
 // 399. Inline Styling for React Elements
