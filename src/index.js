@@ -1,10 +1,18 @@
 ///////////////////////////////////////////////////////
-// 401. React Components
+// 402. React Components Practice
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./component/App"; //Don't need to mention ".jsx "
+import App from "./component/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
+
+///////////////////////////////////////////////////////
+// 401. React Components
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import App from "./component/App"; //Don't need to mention ".jsx "
+
+// ReactDOM.render(<App />, document.getElementById("root"));
 
 ///////////////////////////////////////////////////////
 // 400. React Styling Practice
