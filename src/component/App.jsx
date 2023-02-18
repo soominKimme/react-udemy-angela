@@ -1,17 +1,17 @@
 ///////////////////////////////////////////////////////
 // 402. React Components Practice
-import React from "react";
-import Heading from "./Heading";
+// import React from "react";
+// import Heading from "./Heading";
 
-function App() {
-  return (
-    <div>
-      <Heading />;
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Heading />;
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 ///////////////////////////////////////////////////////
 // 401. React Components

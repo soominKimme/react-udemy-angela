@@ -1,10 +1,45 @@
 ///////////////////////////////////////////////////////
-// 402. React Components Practice
+// 403. Javascript ES6 - Import, Export and Modules
+//There is ONLY ONE default export per file.
+//If you want to import more than one thing => export {a, b}
+
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./component/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// When you want to import more than one thing.
+// Way1 - {Specify exact names of function or constant etc} **BETTER**
+import PI, { doublePi, triplePi } from "./math.js";
+
+// Way2 - Specify
+// import * as pi from "./math.js";
+
+// Way1
+ReactDOM.render(
+  <ul>
+    <li>{PI}</li>
+    <li>{doublePi()}</li>
+    <li>{triplePi()}</li>
+  </ul>,
+  document.getElementById("root")
+);
+
+// Way2
+// ReactDOM.render(
+//   <ul>
+//     <li>{pi.default}</li>
+//     <li>{pi.doublePi}</li>
+//     <li>{pi.triplePi}</li>
+//   </ul>,
+//   document.getElementById("root")
+// );
+
+///////////////////////////////////////////////////////
+// 402. React Components Practice
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import App from "./component/App";
+
+// ReactDOM.render(<App />, document.getElementById("root"));
 
 ///////////////////////////////////////////////////////
 // 401. React Components
