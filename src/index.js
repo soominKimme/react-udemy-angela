@@ -1,27 +1,46 @@
 ///////////////////////////////////////////////////////
-// 403. Javascript ES6 - Import, Export and Modules
-//There is ONLY ONE default export per file.
-//If you want to import more than one thing => export {a, b}
-
+// 404. Javascript ES6 Import, Export and Modules Practice
 import React from "react";
 import ReactDOM from "react-dom";
+import { add, multiply, subtract, divide } from "./calculator.js";
 
-// When you want to import more than one thing.
-// Way1 - {Specify exact names of function or constant etc} **BETTER**
-import PI, { doublePi, triplePi } from "./math.js";
+//Import the add, multiply, subtract and divide functions
+//from the calculator.js file.
+//If successful, your website should look the same as the Final.png
 
-// Way2 - Specify
-// import * as pi from "./math.js";
-
-// Way1
 ReactDOM.render(
   <ul>
-    <li>{PI}</li>
-    <li>{doublePi()}</li>
-    <li>{triplePi()}</li>
+    <li>{add(1, 2)}</li>
+    <li>{multiply(2, 3)}</li>
+    <li>{subtract(7, 2)}</li>
+    <li>{divide(5, 2)}</li>
   </ul>,
   document.getElementById("root")
 );
+
+///////////////////////////////////////////////////////
+// 403. Javascript ES6 - Import, Export and Modules
+//There is ONLY ONE default export per file.
+//If you want to import more than one thing => export {a, b}
+// import React from "react";
+// import ReactDOM from "react-dom";
+
+// // When you want to import more than one thing.
+// // Way1 - {Specify exact names of function or constant etc} **BETTER**
+// import PI, { doublePi, triplePi } from "./math.js";
+
+// // Way2 - Specify
+// // import * as pi from "./math.js";
+
+// // Way1
+// ReactDOM.render(
+//   <ul>
+//     <li>{PI}</li>
+//     <li>{doublePi()}</li>
+//     <li>{triplePi()}</li>
+//   </ul>,
+//   document.getElementById("root")
+// );
 
 // Way2
 // ReactDOM.render(
